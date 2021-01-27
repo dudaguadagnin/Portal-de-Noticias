@@ -1,18 +1,18 @@
 
+import { Fragment } from 'react';
+import Cabecalho from './Cabecalho.js';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      
+const App = () => { 
 
 
+   return(
+     <Fragment>
+       <Cabecalho />
 
-
-
-      
-    </div>
-  );
+     </Fragment>
+   );
+ 
 }
 
 export default App;
