@@ -1,0 +1,9 @@
+.colunas {
+    background: blue;
+    display: inline;
+    grid-template-columns: 2;
+}
+.cor{
+    background: blueviolet;
+    display: grid;
+}
