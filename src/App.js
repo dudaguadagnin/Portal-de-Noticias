@@ -1,56 +1,40 @@
 
-import { Component, Fragment } from 'react';
+import React, { useState } from 'react';
 import Cabecalho from './Cabecalho';
-import Home from './Home';
-
+import { Route, Switch, BrowserRouter } from "react-router-dom";
+import Noticias from './components/Noticias.js'
+import axios from 'axios';
 import 'materialize-css/dist/css/materialize.min.css';
-import ApiService from './ApiService.js';
-
-
-class App extends Component {
-
-  state = {
-    artigos: [],
-  }
+import Typography from "@material-ui/core/Typography";
+import Container from '@material-ui/core/Container';
 
 
 
-  async componentDidMount() {
-    const response = await ApiService.get('/technology.json?api-key=AYRHJvV8XkA2jbb2FMhmGFjgRdVUMTDn')
-    //console.log(response.data);
+const App = () => {
 
-    this.setState({ artigos: [...this.state.artigos, response.data] });
-  }
+  const [noticias, setNoticias] = useState([]);
 
-  render() {
-    const { artigos } = this.state;
-    console.log(artigos);
-    return (
-
-      <Fragment>
-        <Cabecalho />
-        <Home />
-        <div>
-          <h1>listar artigos</h1>
-          <ul>
-            {artigos.map(artigo => (
-              
-                <div> {artigo.section}</div>
-              
-
-            ))}
-          </ul>
-
-        </div>
-      </Fragment>
-
-
-    );
+  const getTopArtigos = async (section) => { // recebe a seção
+    const res = await axios.get(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=AYRHJvV8XkA2jbb2FMhmGFjgRdVUMTDn`);
+    setNoticias(res.data.results);
   };
 
+  return (
+    <div className="fundo">
+      <Cabecalho />
+      <Container>
+        {/*<Typography color="textPrimary" gutterBottom variant="h2" align="center">*/}
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/" render={() => (
+                <Noticias noticias={noticias} getTopArtigos={getTopArtigos}/>)}
+              />
+            </Switch>
+          </BrowserRouter>
+        {/*</Typography>*/}
+      </Container>
+    </div>
+  );
+};
 
-
-}
 export default App;
-
-  //const URL = `https://api.nytimes.com/svc/topstories/v2/science.json?api-key=FXoIO1EDFnwTRgHMORwcYfvKFBWzbtvi`;
