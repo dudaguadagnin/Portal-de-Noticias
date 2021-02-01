@@ -1,8 +1,12 @@
 import React, { Fragment, useEffect } from 'react';
 import '../Estilo/Estilo.css';
-function Cabecalho({ getTopArtigos }) {
+
+//CABECALHO DA PAGINA, POSSUI BOTOES NA NAVEGAÇÃO QUE DIRECIONAM PARA AS SEÇOES
+
+
+function Cabecalho({ getTopArtigos }) { //RECEBE A SEÇÃO DA PAGINA
   useEffect(() => {
-    getTopArtigos('home');
+    getTopArtigos('home'); // A PAGINA INICIA COM A SEÇÃO HOME
   }, []);
 
   return (
@@ -19,15 +23,12 @@ function Cabecalho({ getTopArtigos }) {
           </div>
         </nav>
       </div>
-
-
         <div class="botao-escondido">
           <ul>
             <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getTopArtigos('science'); }} variant="outlined">Science</a>
             <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getTopArtigos('technology'); }} variant="outlined" >Technology</a>
           </ul>
         </div>
-     
     </Fragment>
   );
 }
