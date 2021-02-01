@@ -10,20 +10,20 @@ A barra de Navegação contem o Titulo da pagina e botão, ambos
 redirecionam para o inicio da página (noticias home);
 
 
-# conhecimentos sobre Piramide de testes
+# Conhecimentos sobre Piramide de testes
 
-a Piramide de testes permite a visualização dos tipos e custos dos testes.
+A Piramide de testes permite a visualização dos tipos e custos dos testes.
 
 contem 3 niveis :
-` Testes unitarios   `           
+Testes unitarios             
 Testes de integração
 Testes de ponta a ponta
             
-Testes unitarios: pequenos e rapidos, com testes independentes, sobre partes especificas da aplicaçao como um componente
+`Testes unitarios`: pequenos e rapidos, com testes independentes, sobre partes especificas da aplicaçao como um componente
 
-Testes de integração: testam como as unidades interagem entre si, são usados em comunicações com banco de dados e microserviços
+`Testes de integração`: testam como as unidades interagem entre si, são usados em comunicações com banco de dados e microserviços
 
-Testes de ponta a ponta: validam todo o dfuncionamento de fluxos que o usuario mais faz, testam a aplicação como um todo, com isso o tempo de teste é maior
+`Testes de ponta a ponta`: validam todo o dfuncionamento de fluxos que o usuario mais faz, testam a aplicação como um todo, com isso o tempo de teste é maior
 
 
 
