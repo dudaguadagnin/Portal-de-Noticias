@@ -1,0 +1,20 @@
+
+.estilo-texto{
+    text-align: center;
+}
+.botoens{
+    text-align: center;
+}
+.espaco{
+    margin: 0 1em 0 1em;
+}
+
+
+.top{
+    background: url('../Imagem/images.png') no-repeat center;
+    height: calc(30vh - 2px);
+    
+}
+.conteudo{
+  padding-bottom: 60
+}
