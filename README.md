@@ -1,12 +1,28 @@
 
-Prototipo de portal de noticias
+# Prototipo de portal de noticias
+
+Site de Noticias utilizando React, estilização com materialize e material-ui;
+
+Utiiza a Api do New York Times, obtem noticias da seção home
+os botoes levam as categorias tecnology e science;
+
+A barra de Navegação contem o Titulo da pagina e botão, ambos
+redirecionam para o inicio da pagina (noticias home);
 
 
+# conhecimentos sobre Piramide de testes
 
+a Piramide de testes permite a visualização dos tipos e custos dos testes.
 
+contem 3 niveis : Testes unitarios
+                Testes de integração
+                Testes de ponta a ponta
+            
+Testes unitarios: pequenos e rapidos, com testes independentes, sobre partes especificas da aplicaçao como um componente
 
+Testes de integração: testam como as unidades interagem entre si, são usados em comunicaçoes com banco de dados e microserviços
 
-
+Testes de ponta a ponta: validam todo o dfuncionamento de fluxos que o usuario mais faz, testam a aplicaçao como um todo, com isso o tempo de teste é maior
 
 
 
