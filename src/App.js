@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react';
-import Cabecalho from './Cabecalho';
+import Cabecalho from './components/Cabecalho';
 import { Route, Switch, BrowserRouter } from "react-router-dom";
-import Noticias from './components/Noticias.js'
+import Noticias from './components/Noticia/Noticias.js'
 import axios from 'axios';
 import 'materialize-css/dist/css/materialize.min.css';
-import Typography from "@material-ui/core/Typography";
+//import Typography from "@material-ui/core/Typography";
 import Container from '@material-ui/core/Container';
-
+//import Home from './Home.js'
 
 
 const App = () => {
@@ -18,10 +18,11 @@ const App = () => {
     const res = await axios.get(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=AYRHJvV8XkA2jbb2FMhmGFjgRdVUMTDn`);
     setNoticias(res.data.results);
   };
-
+ 
   return (
     <div className="fundo">
-      <Cabecalho />
+      <Cabecalho getTopArtigos={getTopArtigos}/>
+      
       <Container>
         {/*<Typography color="textPrimary" gutterBottom variant="h2" align="center">*/}
           <BrowserRouter>
@@ -33,6 +34,7 @@ const App = () => {
           </BrowserRouter>
         {/*</Typography>*/}
       </Container>
+      
     </div>
   );
 };

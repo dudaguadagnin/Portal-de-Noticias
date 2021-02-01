@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import './Cabecalho.css';
 const Cabecalho = () => {
 
   return (
@@ -6,11 +7,11 @@ const Cabecalho = () => {
 
         <section>
 
-          <nav>
+          <nav >
 
-            <div class="nav-wrapper grey darken-4">
-              <a href="/" class="brand-logo center" style={{ textDecoration: 'none' }}>Portal de Noticias</a>
-              <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <div className=" navegaccao nav-wrapper grey darken-4" >
+              <a href="/" className="brand-logo center" style={{ textDecoration: 'none',}}>Portal de Noticias</a>
+              <ul id="nav-mobile" className="left hide-on-med-and-down">
                 <li>
                   <a href="/" style={{ textDecoration: 'none' }}>HOME</a>
 

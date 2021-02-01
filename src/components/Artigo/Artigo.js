@@ -1,4 +1,4 @@
-import React from 'react';
+/*import React from 'react';
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -23,7 +23,6 @@ const Artigo = ({ artigo }) => {
         <div className={classes.root} >
             {artigo && (
                 <Card className={classes.card} id={artigo._id}>
-                    <CardMedia className={classes.media} component="img" src='https://nytimes.com/${artigo.multimedia[0].url' alt="news-img" />
                     <CardContent>
                         <Typography color="primary" variant="h6">
                             <a href={artigo.web_url} target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>
@@ -40,3 +39,4 @@ const Artigo = ({ artigo }) => {
 
 
 export default Artigo;
+*/
