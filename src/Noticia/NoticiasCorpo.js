@@ -10,13 +10,13 @@ function Noticias({ noticias }) {
         <Fragment>
 
             <div className="conteudo">
-                <div className="top" />
+                <div className="imagem-ny" />
             </div>
 
-            <div >
+            <div className="responsivo">
                 <Grid container spacing={6}>
                     {noticias.map((noticia) => (
-                        <Grid item xs={12} sm={4} key={noticia.url}>
+                        <Grid className="filho-responsivo" item xs={12} sm={4} key={noticia.url}>
                             <NoticiaCard noticia={noticia} />
                         </Grid>
                     ))}
