@@ -18,7 +18,8 @@ function Noticias({ noticias }) {
             <div className="responsivo">
                 <Grid container spacing={6}>
                     {noticias.map((noticia) => (
-                        <Grid item xs={12} sm={4}>
+                        <Grid item xs={12} sm={6} md={4}> 
+                        {/** MD=960px SM=600px XS=0px */}
                             <NoticiaCard noticia={noticia} />
                         </Grid>
                     ))}
