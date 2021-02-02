@@ -14,14 +14,14 @@ const App = () => {
   const [noticias, setNoticias] = useState([]);
  // como se fosse (this.state.noticias  this.setState)
 
-  const getTopArtigos = async (section) => { // recebe a seção
+  const getSectionArtigos = async (section) => { // recebe a seção
     const res = await axios.get(`https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=AYRHJvV8XkA2jbb2FMhmGFjgRdVUMTDn`);
     setNoticias(res.data.results);
   };
 
   return (
     <div className="fundo">
-      <Cabecalho getTopArtigos={getTopArtigos} />{/**chama e passa a section da navegacao */}
+      <Cabecalho getSectionArtigos={getSectionArtigos} />{/**chama e passa a section da navegacao */}
       <Container>
         <BrowserRouter>
           <Switch>

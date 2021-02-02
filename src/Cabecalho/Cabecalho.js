@@ -5,9 +5,9 @@ import 'materialize-css';
 //CABECALHO DA PAGINA, POSSUI BOTOES NA NAVEGAÇÃO QUE DIRECIONAM PARA AS SEÇOES
 
 
-function Cabecalho({ getTopArtigos }) { //RECEBE A SEÇÃO DA PAGINA
+function Cabecalho({ getSectionArtigos }) { //RECEBE A SEÇÃO DA PAGINA
   useEffect(() => {
-    getTopArtigos('home'); // A PAGINA INICIA COM A SEÇÃO HOME
+    getSectionArtigos('home'); // A PAGINA INICIA COM A SEÇÃO HOME
   }, []);
 
   return (
@@ -18,16 +18,16 @@ function Cabecalho({ getTopArtigos }) { //RECEBE A SEÇÃO DA PAGINA
             <a href="/" className="brand-logo center" style={{ textDecoration: 'none', }}>Portal de Noticias</a>
             <ul className="left hide-on-med-and-down">
               <li><a href="/" style={{ textDecoration: 'none' }}><i class="material-icons">home</i></a></li>
-              <li><a  onClick={() => { getTopArtigos('science'); }} variant="outlined">Science</a></li>
-              <li><a onClick={() => { getTopArtigos('technology'); }} variant="outlined" >Technology</a></li>
+              <li><a  onClick={() => { getSectionArtigos('science'); }} variant="outlined">Science</a></li>
+              <li><a onClick={() => { getSectionArtigos('technology'); }} variant="outlined" >Technology</a></li>
             </ul>
           </div>
         </nav>
       </div>
       <div class="botao-escondido">
         <ul>
-          <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getTopArtigos('science'); }} variant="outlined">Science</a>
-          <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getTopArtigos('technology'); }} variant="outlined" >Technology</a>
+          <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getSectionArtigos('science'); }} variant="outlined">Science</a>
+          <a class="botao waves-effect waves-light btn-small red darken-4" onClick={() => { getSectionArtigos('technology'); }} variant="outlined" >Technology</a>
         </ul>
       </div>
     </Fragment>
