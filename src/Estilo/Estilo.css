@@ -1,11 +1,10 @@
 
+/* NoticiaCard */
 .estilo-texto{
     text-align: center;
 }
-.espaco{
-    margin: 0 1em 0 1em;
-}
 
+/* NoticiasCorpo */
 .imagem-ny{
     background: url('../Imagem/images.png') no-repeat center;
     height: calc(30vh - 2px);
@@ -13,7 +12,14 @@
 .conteudo{
   padding-bottom: 60
 }
+@media only screen and (max-width: 600px) {
+    .imagem-ny{
+        opacity: 0;
+        position: absolute;
+    }
+}
 
+/* Cabecalho */
 @media only screen and (min-width: 993px) {
     .botao-escondido {
         display: none !important; 
@@ -23,13 +29,11 @@
 .botao-escondido{
     text-align: center;
 }
-.botao{
+.botao {
     margin: 0 2px 0 2px ;
 }
 
-@media only screen and (max-width: 600px) {
-.imagem-ny{
-    opacity: 0;
-    position: absolute;
-}
+/* RODAPE */
+.container{
+    padding-bottom: 20px;
 }

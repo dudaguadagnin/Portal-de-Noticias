@@ -6,6 +6,7 @@ import NoticiasCorpo from '../Noticia/NoticiasCorpo.js'
 import axios from 'axios';
 import 'materialize-css/dist/css/materialize.min.css';
 import Container from '@material-ui/core/Container';
+import Rodape from '../Rodape/Rodape';
 
 const App = () => {
 
@@ -29,6 +30,7 @@ const App = () => {
           </Switch>
         </BrowserRouter>
       </Container>
+      <Rodape />
     </div>
   );
 };
