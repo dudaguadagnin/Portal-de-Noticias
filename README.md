@@ -1,15 +1,14 @@
 
 # Prototipo de portal de noticias
 
-Site de Noticias utilizando React, estilização com materialize e material-ui;
+Site de Noticias utilizando React, e Api do New York Times.
 
-Utiiza a Api do New York Times, obtem noticias da seção home
-os botões levam as categorias tecnology e science;
+Pagina inicial obtem noticias da seção home, os botões levam as categorias tecnology e science.
+Para estilização foi utilizado css, materialize e material-ui. Contem responsividade.
+A barra de Navegação contem o Titulo da pagina e botões, estes voltam para a seção home, science e tecnology.
+As notícias são disponibilizadas em cartões clicaveis, que mostram título, midia, resumo e link para acessar a notícia.
 
-A barra de Navegação contem o Titulo da pagina e botão, ambos
-redirecionam para o inicio da página (noticias home);
-
-
+    Criado utilizando create-react-app.
 # Conhecimentos sobre Piramide de testes
 
 A Piramide de testes permite a visualização dos tipos e custos dos testes.
@@ -24,19 +23,6 @@ Testes de ponta a ponta
 `Testes de integração`: testam como as unidades interagem entre si, são usados em comunicações com banco de dados e microserviços
 
 `Testes de ponta a ponta`: validam todo o dfuncionamento de fluxos que o usuario mais faz, testam a aplicação como um todo, com isso o tempo de teste é maior
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
