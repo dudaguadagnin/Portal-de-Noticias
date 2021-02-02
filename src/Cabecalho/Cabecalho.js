@@ -15,7 +15,7 @@ function Cabecalho({ getSectionArtigos }) { //RECEBE A SEÇÃO DA PAGINA
       <div class="navbar-fixed">
         <nav >
           <div className="nav-wrapper grey darken-4" >
-            <a href="/" className="brand-logo center" style={{ textDecoration: 'none', }}>Portal de Noticias</a>
+            <a href="/" className="brand-logo center" style={{ textDecoration: 'none', }}>Portal de Notícias</a>
             <ul className="left hide-on-med-and-down">
               <li><a href="/" style={{ textDecoration: 'none' }}><i class="material-icons">home</i></a></li>
               <li><a  onClick={() => { getSectionArtigos('science'); }} variant="outlined">Science</a></li>

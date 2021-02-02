@@ -12,10 +12,10 @@ const Noticia = ({ noticia }) => {
 
             <div>
                 {noticia && (
-                    <div className=" card medium" >
+                    <div className=" card medium " >
                         <div className="card-image waves-effect waves-block waves-light imagem-correto"  >
                             <img className="activator"
-                                src={noticia.multimedia?.[0]?.url ? `https://nyt.com/${noticia.multimedia[0].url}` : 'https://upload.wikimedia.org/wikipedia/commons/4/40/New_York_Times_logo_variation.jpg'} alt="news-img" />
+                                src={noticia.multimedia?.[0]?.url ? `https://nyt.com/${noticia.multimedia[0].url}` : 'https://f.i.uol.com.br/fotografia/2020/06/10/15918320315ee16ddf0cab9_1591832031_3x2_md.jpg'} />
                         </div>
 
                         <div className="card-content" >
@@ -25,14 +25,17 @@ const Noticia = ({ noticia }) => {
                             </span>
                         </div>
 
-                        <div className="card-reveal">
-                            <span className="card-title grey-text text-darken-4">
+                        <div className="card-reveal red darken-3">
+                            <span className="card-title white-text ">
                                 {noticia.title}
                                 <i className="material-icons right">close</i>
                             </span>
 
-                            <p>{noticia.abstract}</p>
-                            <p><a href={noticia.url} target="_blank" rel="noreferrer">Acesse a noticia</a></p>
+                            <p className="black-text ">{noticia.abstract}</p>
+                            <p><a className="amber-text text-lighten-5" 
+                            href={noticia.url} target="_blank" rel="noreferrer">Acesse a notícia<i className="material-icons right">link</i></a>
+                            
+                            </p>
                         </div>
                     </div>
                 )}
